@@ -98,27 +98,27 @@ function CreateDataTable(start, end) {
 
 //------------------pagination
 
-var d = document.createElement('div');
+let d = document.createElement('div');
 d.setAttribute('class', 'anchorlist');
 
-var prev = document.createElement('a');
+let prev = document.createElement('a');
 prev.href = `javascript:prev_Page()`;
 prev.id = "prev";
 prev.innerHTML = "Prev";
 
-var next = document.createElement('a');
+let next = document.createElement('a');
 next.href = `javascript:next_Page()`;
 next.id = "next";
 next.innerHTML = "Next";
 
-var arr = createAnchorList();
+let arr = createAnchorList();
 
 
 function createAnchorList() {
-    var ar = [];
+    let ar = [];
     for (let i = 1; i <= 10; i++) {
 
-        var a = document.createElement('a');
+        let a = document.createElement('a');
         a.href = `javascript:changePage(${i})`;
         a.innerHTML = i;
         if (i === 1) {
@@ -129,7 +129,7 @@ function createAnchorList() {
     return ar;
 }
 
-var heading = document.createElement('div');
+let heading = document.createElement('div');
 heading.innerHTML = "Pagination"
 heading.setAttribute('class', 'heading');
 
